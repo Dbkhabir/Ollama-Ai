@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ollama AI Chat</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <!-- Google Fonts for a cleaner look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+    <!-- ===== App Container ===== -->
+    <div id="app">
+
+        <!-- Header -->
+        <header id="header">
+            <div class="header-inner">
+                <div class="logo">
+                    <span class="logo-icon">🤖</span>
+                    <h1>Ollama AI Chat</h1>
+                </div>
+                <span class="model-badge">gpt-oss_claude-sonnet4.6</span>
+            </div>
+        </header>
+
+        <!-- Chat Messages Area -->
+        <main id="chat-container">
+            <div id="messages">
+                <!-- Welcome message -->
+                <div class="message bot-message">
+                    <div class="avatar bot-avatar">🤖</div>
+                    <div class="bubble bot-bubble">
+                        <p>স্বাগতম! আমি Ollama AI। আপনার যেকোনো প্রশ্ন করুন — আমি উত্তর দেওয়ার চেষ্টা করবো।</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Input Area -->
+        <footer id="input-area">
+            <form id="chat-form" autocomplete="off">
+                <div class="input-wrapper">
+                    <textarea
+                        id="user-input"
+                        placeholder="আপনার প্রশ্ন লিখুন..."
+                        rows="1"
+                        maxlength="4000"
+                    ></textarea>
+                    <button type="submit" id="send-btn" title="পাঠান">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+        </footer>
+
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
